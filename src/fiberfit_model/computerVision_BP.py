@@ -50,9 +50,10 @@ def process_histogram(PabsFlip, N1, uCut, lCut, angleInc, radStep):
 
     #  Set up polar coordinates prior to summing the spectrum
     theta1Rad = np.linspace(0.0, 2 * math.pi, num=360/angleInc)
-    f1 = np.round_(N1 / (2 * CO_lower))
-    f2 = np.round_(N1 / (2 * CO_upper))
-
+    # f1 = np.round_(N1 / (2 * CO_lower))
+    # f2 = np.round_(N1 / (2 * CO_upper))
+    f1 = CO_uppe
+    f2 = CO_lower
     rho1 = np.linspace(f1, f2, num=(f2 - f1)/radStep)  # frequency band
     PowerX = np.zeros((theta1Rad.size, theta1Rad.size))
     PowerY = np.zeros((theta1Rad.size))
